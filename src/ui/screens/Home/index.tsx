@@ -6,6 +6,7 @@ import { CircularProgress } from '../../components/CircleProgress'
 
 import useStyles from './style'
 import Animated, { useAnimatedStyle, withSpring, withTiming } from 'react-native-reanimated'
+import { useWeek } from '../../../business'
 
 const DATA_LIST_HABIT = [
   {
@@ -68,9 +69,9 @@ export default function Home() {
   const [isSelected, setIsSelected] = useState<number>(0)
   const [selectedType, setSelectedType] = useState<string>("habit")
 
+
   const styles = useStyles()
 
-  console.log("selectedType", selectedType)
   return (
     <View style={styles.container}>
 
